@@ -175,12 +175,12 @@ function BranchSelectorModal({ onSelect }: {
       initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
       transition={{ duration: 0.28, ease: EO }}
       className="modal-scroll"
-      style={{
-        position: "fixed", inset: 0, zIndex: 1000,
-        background: "rgba(8,2,0,0.93)", backdropFilter: "blur(14px)",
-        display: "flex", alignItems: "center", justifyContent: "center",
-        padding: "clamp(60px,10vh,100px) clamp(12px,3vw,40px) 24px", overflowY: "auto", direction: "rtl",
-      }}
+        style={{
+          position: "fixed", inset: 0, zIndex: 1000,
+          background: "rgba(8,2,0,0.93)", backdropFilter: "blur(14px)",
+          display: "flex", alignItems: "flex-start", justifyContent: "center",
+          padding: "calc(env(safe-area-inset-top,0px) + clamp(40px,8vh,80px)) clamp(12px,3vw,40px) 24px", overflowY: "auto", direction: "rtl",
+        }}
     >
       <motion.div
         initial={{ opacity: 0, y: 28, scale: 0.97 }}
@@ -355,7 +355,7 @@ function Hero({ branch }: { branch: Branch }) {
   const pts = Array.from({ length: 5 }, (_, i) => ({ left: `${13 + i * 16}%`, delay: `${i * 0.75}s`, dur: `${3 + i * 0.45}s`, sz: i % 2 ? 5 : 4 }));
 
   return (
-    <section ref={ref} style={{ position: "relative", height: "100vh", minHeight: 560, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
+    <section ref={ref} style={{ position: "relative", height: "100dvh", minHeight: 560, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" }}>
       <motion.div style={{ position: "absolute", inset: "-8%", backgroundImage: `url(${IMG.g4})`, backgroundSize: "cover", backgroundPosition: "center", animation: "kenBurns 10s ease-in-out infinite alternate", y: bgY }} />
       <div style={{ position: "absolute", inset: 0, background: "rgba(15,5,0,0.72)" }} />
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 280, background: "linear-gradient(to top,#0F0500,rgba(15,5,0,0))" }} />
