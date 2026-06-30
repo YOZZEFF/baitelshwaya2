@@ -1,0 +1,264 @@
+Design a full modern Arabic restaurant landing page for 
+"بيت الشواية اليمني" with the following specs:
+
+═══════════════════════════════════════
+BRAND IDENTITY
+═══════════════════════════════════════
+Restaurant: بيت الشواية اليمني (Yemeni Grill House)
+Tagline: دجاج الشواية 🔥 من الخليج إلى مصر
+Vibe: Dark, fiery, premium, authentic Middle Eastern
+Direction: RTL (Arabic layout — right to left)
+Mood board: Hot coals at night, Yemeni spice market, 
+            warm lanterns, ember glow
+
+═══════════════════════════════════════
+COLOR SYSTEM
+═══════════════════════════════════════
+Background Primary:   #0F0500
+Background Card:      #1E0C02
+Background Surface:   #2D1A0A
+Ember Red (CTA):      #C8410A
+Spice Amber:          #D4870A
+Saffron Gold:         #F5C842
+Warm Cream (text):    #F9F3E8
+White:                #FFFFFF
+WhatsApp Green:       #25D366
+
+═══════════════════════════════════════
+TYPOGRAPHY
+═══════════════════════════════════════
+Display headings: Cairo Bold — large, commanding
+Subheadings: Tajawal SemiBold
+Body: Tajawal Regular
+All text: right-aligned, RTL
+
+═══════════════════════════════════════
+ANIMATIONS — SIMPLE BUT MAGNETIC
+═══════════════════════════════════════
+Apply these micro-animations across all sections:
+
+① ENTRANCE ANIMATIONS (on scroll into view)
+   - Headings: fade-in + slide up 24px — duration 0.6s ease-out
+   - Cards: fade-in + scale from 0.95 to 1 — duration 0.5s
+   - Images: fade-in — duration 0.8s
+   - Stagger delay: 0.1s between each child element
+
+② HERO SECTION ANIMATIONS (auto-play on load)
+   - Background: very slow zoom-in Ken Burns effect on 
+     dark fire/coal image — scale 1.0 to 1.08 over 8s loop
+   - Main heading: words appear one by one, 
+     fade + slide up, 0.4s stagger
+   - CTA buttons: fade-in after 1s delay
+   - Floating ember particles: 5–6 small glowing dots 
+     drifting upward slowly, infinite loop, 
+     random opacity 0.3–0.8, random drift direction
+   - Bottom gradient overlay: animated glow pulse 
+     amber color, opacity 0.1 to 0.25, 3s loop
+
+③ NAVBAR ANIMATIONS
+   - On scroll down: navbar background transitions from 
+     transparent to #0F0500 with blur backdrop
+   - Nav links: underline slides in from left on hover
+   - CTA button: subtle scale 1.0 to 1.04 on hover + 
+     ember red glow shadow appears
+
+④ DISH CARDS ANIMATIONS
+   - Default state: dark card, subtle amber border 0.5px
+   - Hover state: 
+     * Card lifts — translateY(-8px)
+     * Warm amber glow appears (box-shadow)
+     * Food image scales to 1.08
+     * "اطلب الآن" button slides up from bottom
+     * Transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)
+
+⑤ BRANCH CARDS ANIMATIONS
+   - Hover: border color transitions from #2D1A0A to #F5C842
+   - Map pin icon: subtle bounce animation on hover
+   - Phone/WhatsApp icons: scale 1.1 + color change on hover
+
+⑥ WHATSAPP FLOATING BUTTON
+   - Permanent pulse ring animation: 
+     green circle expanding outward + fading, 2s infinite
+   - On hover: scale 1.1 + rotate icon slightly 5deg
+   - On scroll: button appears with bounceIn after 3s delay
+
+⑦ STATS/COUNTER SECTION
+   - Numbers count up from 0 to final value when 
+     section enters viewport — duration 2s ease-out
+   - Each stat icon: rotates 360deg once on entrance
+
+⑧ SECTION TRANSITIONS
+   - Between sections: thin amber gradient line 
+     draws from right to left (1s) as divider
+   - Background color shifts subtly between sections 
+     using gradient blends
+
+⑨ CTA SECTION FIRE EFFECT
+   - Full-width section with animated gradient background
+   - Gradient shifts: #C8410A → #D4870A → #F5C842 → back
+   - Duration: 4s infinite alternate
+   - WhatsApp button: glowing green pulse + shadow
+
+⑩ FOOTER
+   - Social icons: scale + color fill on hover, 0.2s
+   - Logo: subtle golden shimmer animation, 3s loop
+
+═══════════════════════════════════════
+PAGE SECTIONS (top to bottom)
+═══════════════════════════════════════
+
+SECTION 1 — STICKY NAVBAR
+Height: 72px
+Background: transparent → #0F0500 on scroll
+Content:
+  - Right: Logo "بيت الشواية اليمني" in gold + flame icon
+  - Center: nav links — الرئيسية | المنيو | فروعنا | اتصل بنا
+  - Left: "اطلب الآن 🔥" button in ember red #C8410A
+
+SECTION 2 — HERO (100vh)
+Background: dark coal image with 70% dark overlay
+Centered content:
+  - Small label badge: "🇾🇪 الطعم اليمني الأصيل"
+  - H1: "الطعم الحقيقي" (72px, Cairo Bold, white)
+  - H2: "من الخليج" (72px, Cairo Bold, saffron gold)
+  - Subtitle: "دجاج شواية يمني بالخلطة الخليجية الأصيلة — 4 فروع في القاهرة"
+  - Two buttons side by side:
+    * "اطلب عبر واتساب" — WhatsApp green, large, rounded
+    * "شاهد المنيو" — transparent, gold border, rounded
+  - Scroll indicator arrow bouncing at bottom center
+
+SECTION 3 — STATS BAR
+Background: #1E0C02
+4 stats in equal columns with thin gold dividers:
+  🔥 4 فروع | ⭐ خلطة أصيلة | 🚀 توصيل سريع | 🕐 مفتوح متأخر
+
+SECTION 4 — FEATURED DISHES
+Background: #0F0500
+Title: "أشهى أطباقنا" centered, gold underline decoration
+4-column grid of dish cards:
+  Card design:
+  - Dark card #1E0C02, rounded 16px
+  - Top: food image area (360:240 ratio, dark placeholder)
+    with category badge top-right "الأكثر طلباً" in red
+  - Body: dish name (Arabic, bold, cream), 
+    short description (muted), price in amber bold
+  - Bottom: "اطلب الآن" red button full width
+  
+  Dishes:
+  1. دجاج شواية كامل — الوجبة الأشهر بالخلطة اليمنية
+  2. نص دجاج شواية — مثالي للفرد مع الأرز والسلطة  
+  3. ساندوتش شواية — خبز طازج مع دجاج مشوي وصوص
+  4. وجبة عائلية — دجاجتين كاملتين مع مشروبات
+
+SECTION 5 — ABOUT / STORY
+Background: #1E0C02
+Split layout (60/40):
+  Right side (text):
+    - Small gold tag: "قصتنا"
+    - Heading: "من الخليج إلى مصر 🇸🇦 🇪🇬"
+    - Story paragraph about authentic Yemeni recipe 
+      brought from Saudi Arabia to Egypt
+    - 3 feature pills: خلطة سرية | طازج يومياً | شواية حقيقية
+  Left side: 
+    - Decorative Yemeni geometric SVG pattern in amber/gold
+    - Subtle glow behind pattern
+
+SECTION 6 — BRANCHES
+Background: #0F0500
+Title: "فروعنا في القاهرة" + subtitle "اختار أقرب فرع ليك"
+2x2 grid of branch cards:
+
+  Each card (#1E0C02, gold border on hover, 16px radius):
+    - Top colored accent bar (thin amber line)
+    - Branch name bold in gold: فيصل
+    - Map pin icon + address in cream
+    - Phone icon + numbers (clickable)
+    - WhatsApp icon in green
+    - "احجز طاولة" outlined button
+
+  Branch 1 — فيصل
+  2 ش محمد عفيفي، العشرين فيصل
+  📞 0223502288 / 01222606500
+
+  Branch 2 — الدقي
+  8 ش إيران الدقي، أمام عطارة درهم
+  📞 0237615006 / 01153334389
+
+  Branch 3 — مدينة نصر
+  75 ش ابو داوود الظاهري، مدينة نصر
+  📞 01281922823 / 01115551189
+
+  Branch 4 — المهندسين
+  20 الحجاز، ميت عقبة، العجوزة
+  📞 01114344413 / 01110288823
+
+SECTION 7 — SOCIAL PROOF
+Background: #1E0C02
+Title: "عملاءنا بيحبونا 🔥"
+3 review cards side by side:
+  - 5 gold stars
+  - Arabic review text (2–3 lines)
+  - Customer avatar circle + name
+  - Card: dark, subtle gold border, 16px radius
+
+SECTION 8 — ORDER CTA (full width)
+Animated fire gradient background
+Large centered content:
+  - Heading: "جاهز تطلب؟" (white, 56px)
+  - Sub: "اطلب دلوقتي وهيوصلك طازج من الشواية 🔥"
+  - Giant WhatsApp button: "اطلب على واتساب الآن"
+    (green, large, icon + text, rounded full)
+
+SECTION 9 — FOOTER
+Background: #0A0300 (darkest)
+3 columns:
+  Right: Logo + tagline + short about
+  Center: Quick links list
+  Left: Social icons (Facebook, Instagram, TikTok)
+Bottom bar: thin amber divider + copyright text centered
+
+═══════════════════════════════════════
+COMPONENT SPECS
+═══════════════════════════════════════
+Buttons:
+  Primary: bg #C8410A, text white, px-8 py-3, rounded-full
+  Secondary: border #F5C842, text #F5C842, transparent bg
+  WhatsApp: bg #25D366, text white, icon left
+  
+Cards:
+  Background: #1E0C02
+  Border: 0.5px solid rgba(245,200,66,0.2)
+  Border-radius: 16px
+  Hover border: #F5C842
+
+Icons: Phosphor Icons or Lucide — outline style, warm colors
+
+Spacing system: 8px base grid
+  Section padding: 80px top/bottom (desktop), 48px (mobile)
+  Card gap: 24px
+  
+Shadows:
+  Card hover: 0 20px 60px rgba(200,65,10,0.3)
+  Button hover: 0 8px 24px rgba(200,65,10,0.4)
+  WhatsApp pulse: 0 0 0 8px rgba(37,211,102,0.2)
+
+═══════════════════════════════════════
+RESPONSIVE BREAKPOINTS
+═══════════════════════════════════════
+Desktop: 1280px — full layout as described
+Tablet: 768px — 2-column grids, smaller hero text
+Mobile: 375px — single column, stacked nav becomes hamburger menu
+
+═══════════════════════════════════════
+FIGMA-SPECIFIC NOTES
+═══════════════════════════════════════
+- Use Auto Layout for all components
+- Create component variants for: 
+  card (default/hover), button (default/hover/active),
+  nav (transparent/scrolled)
+- Use Smart Animate for all transitions
+- Prototype connections: 
+  hover states on all cards and buttons
+  scroll trigger for navbar background change
+  scroll trigger for entrance animations
+- Export assets at 2x for retina screens
